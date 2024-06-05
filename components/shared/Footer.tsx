@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <div className="bg-black">
       <div className="max-w-7xl mx-auto p-5 px-10 w-full">
-        <div className="flex items-center justify-between gap-10">
+        <div className="flex flex-col md:flex-row py-10 items-center justify-between gap-10">
           <div>
             <Link
               href={"/"}
@@ -52,7 +52,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <div className="flex flex-col gap-3 text-white">
+            <div className="md:flex md:flex-col md:gap-3 md:text-white hidden">
               <h1 className="font-bold text-lg">Subscribe to our newsletter</h1>
               <h1>For product announcements and exclusive insights</h1>
               <div className="flex gap-2">

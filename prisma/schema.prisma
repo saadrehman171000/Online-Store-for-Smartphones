@@ -13,16 +13,26 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        Int      @id @default(autoincrement())
+  kindeId   String   @unique
+  email     String   @unique
+  firstName String
+  lastName  String
+  orders    Orders[]
+}
+
 model Product {
-  id          Int             @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   name        String
   price       String
   stock       String
-  images      ProductImages[]
+  images      String
   color       String
-  brand       Brand           @relation(fields: [brandId], references: [id])
+  brand       Brand    @relation(fields: [brandId], references: [id])
   description String
   brandId     Int
+  order       Orders[]
 }
 
 model FeaturedProducts {
@@ -30,25 +40,17 @@ model FeaturedProducts {
   name        String
   price       String
   stock       String
-  images      ProductImages[]
+  images      String
   color       String
   brand       Brand           @relation(fields: [brandId], references: [id])
   description String
   brandId     Int
 }
 
-model ProductImages {
-  id                 Int               @id @default(autoincrement())
-  url                String
-  productId          Int
-  product            Product           @relation(fields: [productId], references: [id])
-  FeaturedProducts   FeaturedProducts? @relation(fields: [featuredProductsId], references: [id])
-  featuredProductsId Int?
-}
 
 model Brand {
   id               Int                @id @default(autoincrement())
-  brandName        String
+  brandName        String             @unique
   products         Product[]
   FeaturedProducts FeaturedProducts[]
 }
@@ -59,4 +61,26 @@ model Blog {
   description String
   image       String
   date        DateTime @default(now())
+}
+
+model Contact {
+  id          Int    @id @default(autoincrement())
+  fullName    String
+  Email       String
+  phoneNumber String
+  Message     String
+}
+
+model Orders {
+  id              Int      @id @default(autoincrement())
+  user            User     @relation(fields: [userId], references: [id])
+  userId          Int
+  product         Product  @relation(fields: [productId], references: [id])
+  productId       Int
+  shippingAddress String
+  billingAddress  String
+  postcode        String
+  phoneNumber     String
+  status          String   @default("pending")
+  createdAt       DateTime @default(now())
 }

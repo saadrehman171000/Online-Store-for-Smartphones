@@ -1,10 +1,12 @@
 "use server";
 import { blogSchema } from "@/lib/validator";
 import prisma from "@/util/prismadb";
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/dist/types/server";
 import { NextResponse } from "next/server";
 import * as z from "zod";
 
 type BlogRequest = z.infer<typeof blogSchema>;
+
 
 export async function createBlog(input: BlogRequest) {
   try {
@@ -23,14 +25,12 @@ export async function createBlog(input: BlogRequest) {
         image: data.image,
       },
     });
-    console.log(newBlog);
 
     return {
       success: true,
       data: { newBlog },
     };
   } catch (error) {
-    console.log(error);
     return { success: false, error: "something went wrong" };
   }
 }
@@ -40,10 +40,11 @@ export async function getBlogs() {
     const data = await prisma.blog.findMany();
     return { success: true, data };
   } catch (error) {
-    console.log(error);
     return { success: false, error: "something went wrong" };
   }
 }
+
+
 
 export async function getBlogId(id: number) {
   try {

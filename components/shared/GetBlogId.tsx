@@ -26,10 +26,10 @@ const GetBlogId = async () => {
     <div className="max-w-7xl my-32 mx-auto p-5 px-10 w-full">
       {blogData.data ? (
         <div className="flex flex-col gap-10">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row gap-5 items-start justify-between">
             <div className="flex flex-col gap-5">
               <p className="text-red-400 text-lg">LATEST NEWS</p>
-              <h1 className="font-bold text-7xl uppercase max-w-md tracking-tighter">
+              <h1 className="font-bold text-5xl md:text-7xl uppercase max-w-md tracking-tighter">
                 {blogData.data?.title}
               </h1>
               <p className="font-bold tracking-tighter">

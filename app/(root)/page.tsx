@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div>
       <Hero />
-      <h1 className="text-center font-extrabold tracking-tighter text-[2rem]">
+      <h1 className="text-center font-extrabold tracking-tighter text-2xl md:text-[2rem]">
         We provide wide range of{" "}
         <span className="bg-gradient-to-r from-red-700 via-red-500 to-red-400 inline-block text-transparent bg-clip-text">
           Products

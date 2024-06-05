@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const About = () => {
-  return <div>About functionality will be added here</div>;
+  return (
+    <div>
+      {/* Content for your About component */}
+      This is the About component.
+    </div>
+  );
 };
 
 export default About;

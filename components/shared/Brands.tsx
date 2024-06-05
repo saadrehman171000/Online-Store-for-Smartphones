@@ -20,7 +20,7 @@ import oneplus2 from "@/public/OnePlus.png";
 const Brands = () => {
   const brands = [apple, asus, huawei, android, oneplus2, samsung];
   return (
-    <div className="max-w-7xl my-10 mx-32">
+    <div className="max-w-7xl my-10 mx-32 -z-20">
       <Carousel>
         <CarouselContent className="-ml-1">
           {brands.map((image, index) => (

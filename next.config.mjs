@@ -11,6 +11,15 @@ const nextConfig = {
       {
         hostname: "fdn2.gsmarena.com",
       },
+      {
+        hostname: "utfs.io",
+      },
+      {
+        hostname: "image-us.samsung.com",
+      },
+      {
+        hostname: "www.oneplus.com",
+      },
     ],
   },
 };

@@ -7,7 +7,7 @@ const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="px-10 flex flex-col gap-8">
+    <div className="px-10 flex flex-col gap-8 pb-20">
       <Link
         href={"/dashboard"}
         className={`${
@@ -56,17 +56,7 @@ const Sidebar = () => {
             : "hover:bg-black hover:text-white hover:rounded-2xl "
         } font-extralight tracking-tighter text-xl transition-all duration-300 px-5 py-2`}
       >
-        Edit Contact
-      </Link>
-      <Link
-        href={"/edit-about"}
-        className={`${
-          pathname === "/edit-about"
-            ? "bg-black text-white rounded-2xl px-5 py-2"
-            : "hover:bg-black hover:text-white hover:rounded-2xl "
-        } font-extralight tracking-tighter text-xl transition-all duration-300 px-5 py-2`}
-      >
-        Edit About
+        View Contact Details
       </Link>
     </div>
   );

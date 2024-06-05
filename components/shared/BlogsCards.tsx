@@ -7,7 +7,7 @@ const BlogsCards = async () => {
 
   return (
     <div className="mt-10">
-      <div className="grid grid-cols-2 gap-10">
+      <div className="flex flex-col gap-5 md:grid md:grid-cols-2 md:gap-10">
         {blogData.data?.map((item) => (
           <Card
             key={item.title}
