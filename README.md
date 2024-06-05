@@ -12,7 +12,7 @@ This repository hosts the source code for an online smartphone store using Next.
 - Browse products, search and filter, secure user authentication, shopping cart, and admin management.
 
 ## Installation
-1. Clone the repo: `git clone https://github.com/your-username/Online-Store-for-Smartphones.git`
+1. Clone the repo: `git clone https://github.com/saadrehman171000/Online-Store-for-Smartphones.git`
 2. Install dependencies: `npm install`
 3. Set up MySQL and add `.env` with DB credentials.
 4. Start the server: `npm run dev`
