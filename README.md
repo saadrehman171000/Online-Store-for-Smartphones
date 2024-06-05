@@ -1,5 +1,23 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This repository hosts the source code for an online smartphone store using Next.js, Node.js with Express, MySQL, and Kinde for authentication.
+
+## Technologies Used
+- **Frontend**: Next.js
+- **Backend**: Node.js, Express
+- **Database**: MySQL
+- **Authentication**: Kinde
+
+## Features
+- Browse products, search and filter, secure user authentication, shopping cart, and admin management.
+
+## Installation
+1. Clone the repo: `git clone https://github.com/your-username/Online-Store-for-Smartphones.git`
+2. Install dependencies: `npm install`
+3. Set up MySQL and add `.env` with DB credentials.
+4. Start the server: `npm run dev`
+5. Visit `http://localhost:3000`.
+
 ## Getting Started
 
 First, run the development server:
